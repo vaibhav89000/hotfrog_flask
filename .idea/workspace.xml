@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1c6a1e60-0a6a-4203-b283-b60892991b38" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hotfrogdetails/locationtwo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hotfrogdetails/locationtwo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hotfrogdetails/optiontwo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hotfrogdetails/optiontwo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotfrogdetails/hotfrogdetails.db" beforeDir="false" afterPath="$PROJECT_DIR$/hotfrogdetails/hotfrogdetails.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hotfrogdetails/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/hotfrogdetails/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

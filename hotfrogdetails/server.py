@@ -114,7 +114,7 @@ def delete_all():
     # rows = cur.fetchall()
     con.commit()
 
-    return redirect('http://127.0.0.1:5000/home')
+    return redirect('http://127.0.0.1:5000/view')
 
 
 @app.route("/csv")
@@ -147,7 +147,7 @@ def deletebysearch():
         cursor.execute(sql_delete_query)
         sqliteConnection.commit()
 
-    return redirect('http://127.0.0.1:5000/home')
+    return redirect('http://127.0.0.1:5000/view')
 
 
 @app.route("/view", methods=['POST'])
