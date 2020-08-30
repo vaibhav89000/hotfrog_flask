@@ -177,111 +177,123 @@ def view():
 
 @app.route('/submittwo', methods=['POST'])
 def onsubmittwo():
-    find = request.form['input1']
-    near = request.form['input2']
+    find_striped = request.form['input1']
+    near_striped = request.form['input2']
 
-    if (os.stat(os.path.abspath(os.curdir)+'\optiontwo.txt').st_size != 0):
-        with open(os.path.abspath(os.curdir)+'\optiontwo.txt', 'a') as f:
-            f.write('')
-    if (os.stat(os.path.abspath(os.curdir)+'\locationtwo.txt').st_size != 0):
-        with open(os.path.abspath(os.curdir)+'\locationtwo.txt', 'a') as f:
-            f.write('')
+    find = find_striped.strip()
+    near = near_striped.strip()
 
-    new_find = ''
-    new_near = ''
-
-    for b in find:
-        if (b == '\n'):
-            new_find += ''
-        else:
-            new_find += b
-
-    for b in near:
-        if (b == '\n'):
-            new_near += ''
-        else:
-            new_near += b
-
-    if request.method == 'POST':
-        if find != '' and near != '':
+    if find != '' and near != '':
+        if (os.stat(os.path.abspath(os.curdir)+'\optiontwo.txt').st_size != 0):
             with open(os.path.abspath(os.curdir)+'\optiontwo.txt', 'a') as f:
-                f.write(str(new_find))
+                f.write('\n')
+        if (os.stat(os.path.abspath(os.curdir)+'\locationtwo.txt').st_size != 0):
             with open(os.path.abspath(os.curdir)+'\locationtwo.txt', 'a') as f:
-                f.write(str(new_near))
+                f.write('\n')
+
+        new_find = ''
+        new_near = ''
+
+        for b in find:
+            if (b == '\n'):
+                new_find += ''
+            else:
+                new_find += b
+
+        for b in near:
+            if (b == '\n'):
+                new_near += ''
+            else:
+                new_near += b
+
+        if request.method == 'POST':
+            if find != '' and near != '':
+                with open(os.path.abspath(os.curdir)+'\optiontwo.txt', 'a') as f:
+                    f.write(str(new_find))
+                with open(os.path.abspath(os.curdir)+'\locationtwo.txt', 'a') as f:
+                    f.write(str(new_near))
 
     return redirect('http://127.0.0.1:5000/home')
 
 
 @app.route('/submitthree', methods=['POST'])
 def onsubmitthree():
-    find = request.form['input1']
-    near = request.form['input2']
+    find_striped = request.form['input1']
+    near_striped  = request.form['input2']
 
-    if (os.stat(os.path.abspath(os.curdir)+'\optionthree.txt').st_size != 0):
-        with open(os.path.abspath(os.curdir)+'\optionthree.txt', 'a') as f:
-            f.write('')
-    if (os.stat(os.path.abspath(os.curdir)+'\locationthree.txt').st_size != 0):
-        with open(os.path.abspath(os.curdir)+'\locationthree.txt', 'a') as f:
-            f.write('')
+    find = find_striped.strip()
+    near = near_striped.strip()
 
-    new_find = ''
-    new_near = ''
-
-    for b in find:
-        if (b == '\n'):
-            new_find += ''
-        else:
-            new_find += b
-
-    for b in near:
-        if (b == '\n'):
-            new_near += ''
-        else:
-            new_near += b
-
-    if request.method == 'POST':
-        if find != '' and near != '':
+    if find != '' and near != '':
+        if (os.stat(os.path.abspath(os.curdir)+'\optionthree.txt').st_size != 0):
             with open(os.path.abspath(os.curdir)+'\optionthree.txt', 'a') as f:
-                f.write(str(new_find))
+                f.write('\n')
+        if (os.stat(os.path.abspath(os.curdir)+'\locationthree.txt').st_size != 0):
             with open(os.path.abspath(os.curdir)+'\locationthree.txt', 'a') as f:
-                f.write(str(new_near))
+                f.write('\n')
+
+        new_find = ''
+        new_near = ''
+
+        for b in find:
+            if (b == '\n'):
+                new_find += ''
+            else:
+                new_find += b
+
+        for b in near:
+            if (b == '\n'):
+                new_near += ''
+            else:
+                new_near += b
+
+        if request.method == 'POST':
+            if find != '' and near != '':
+                with open(os.path.abspath(os.curdir)+'\optionthree.txt', 'a') as f:
+                    f.write(str(new_find))
+                with open(os.path.abspath(os.curdir)+'\locationthree.txt', 'a') as f:
+                    f.write(str(new_near))
 
     return redirect('http://127.0.0.1:5000/home')
 
 
 @app.route('/submitfour', methods=['POST'])
 def onsubmitfour():
-    find = request.form['input1']
-    near = request.form['input2']
+    find_striped = request.form['input1']
+    near_striped = request.form['input2']
 
-    if (os.stat(os.path.abspath(os.curdir)+'\optionfour.txt').st_size != 0):
-        with open(os.path.abspath(os.curdir)+'\optionfour.txt', 'a') as f:
-            f.write('')
-    if (os.stat(os.path.abspath(os.curdir)+'\locationfour.txt').st_size != 0):
-        with open(os.path.abspath(os.curdir)+'\location.txt', 'a') as f:
-            f.write('')
+    find = find_striped.strip()
+    near = near_striped.strip()
 
-    new_find = ''
-    new_near = ''
-
-    for b in find:
-        if (b == '\n'):
-            new_find += ''
-        else:
-            new_find += b
-
-    for b in near:
-        if (b == '\n'):
-            new_near += ''
-        else:
-            new_near += b
-
-    if request.method == 'POST':
-        if find != '' and near != '':
+    if find != '' and near != '':
+        if (os.stat(os.path.abspath(os.curdir)+'\optionfour.txt').st_size != 0):
             with open(os.path.abspath(os.curdir)+'\optionfour.txt', 'a') as f:
-                f.write(str(new_find))
-            with open(os.path.abspath(os.curdir)+'\locationfour.txt', 'a') as f:
-                f.write(str(new_near))
+                f.write('\n')
+        if (os.stat(os.path.abspath(os.curdir)+'\locationfour.txt').st_size != 0):
+            with open(os.path.abspath(os.curdir)+'\location.txt', 'a') as f:
+                f.write('\n')
+
+        new_find = ''
+        new_near = ''
+
+        for b in find:
+            if (b == '\n'):
+                new_find += ''
+            else:
+                new_find += b
+
+        for b in near:
+            if (b == '\n'):
+                new_near += ''
+            else:
+                new_near += b
+
+        if request.method == 'POST':
+            if find != '' and near != '':
+                with open(os.path.abspath(os.curdir)+'\optionfour.txt', 'a') as f:
+                    f.write(str(new_find))
+                with open(os.path.abspath(os.curdir)+'\locationfour.txt', 'a') as f:
+                    f.write(str(new_near))
 
     return redirect('http://127.0.0.1:5000/home')
 
