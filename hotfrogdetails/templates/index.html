@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hotfrog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body style="background-color:grey;">
+    <div class="container">
+        <div class="row"  style="margin-top:10px;margin-bottom:70px">
+             <form action="" method="POST">
+
+                <div class="row">
+                <div class="col-lg-6 ">
+                    <input name="input1" placeholder="find">
+                </div>
+
+
+                <div class="col-lg-6 ">
+                    <input name="input2" placeholder="near">
+
+                </div>
+                </div>
+                 <div class="row">
+                <div class="col-lg-6 ">
+                    <input class="btn btn-primary" type="submit">
+                </div>
+                 </div>
+             </form>
+        </div>
+
+
+
+<!--        <form action="" method="POST">-->
+<!--          <label for="country">find</label>-->
+<!--          <input name="input1">-->
+<!--          <label for="city">near</label>-->
+<!--          <input name="input2">-->
+
+<!--        <input type="submit">-->
+<!--      </form>-->
+
+        <div class="row"  style="margin-top:10px;margin-bottom:70px">
+            <div class="col-lg-4 ">
+                    <a href="/home" ><button type="button" class="btn btn-primary"  >back</button></a>
+                </div>
+            <div class="col-lg-4 ">
+                    <a href="/delete" ><button type="button" class="btn btn-danger"  >Delete All</button></a>
+                </div>
+            <div class="col-lg-4 ">
+                    <a href="/csv" ><button type="button" class="btn btn-primary" >To CSV</button></a>
+                </div>
+        </div>
+
+
+
+        <div class="row"  style="margin-top:10px;margin-bottom:70px">
+             <form action="/deletebysearch" method="POST">
+
+                <div class="row">
+                <div class="col-lg-6 ">
+                    <label>keyword delete</label>
+                </div>
+                    <div class="col-lg-6 ">
+                    <input name="del" placeholder="KEYWORD">
+                </div>
+                </div>
+                 <div class="row">
+                <div class="col-lg-6 ">
+                    <input type="submit" class="btn btn-danger">
+                </div>
+                 </div>
+             </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+<!--          <br>-->
+<!--          <br>-->
+<!--          <form action="/deletebysearch" method="POST">-->
+<!--          <label for="keyword delete">keyword delete</label>-->
+<!--          <input name="del">-->
+<!--          <input type="submit">-->
+<!--          </form>-->
+
+
+
+
+
+
+
+        <div class="table-responsive-lg">
+            <table class="table table-sm">
+          <thead class="thead-dark">
+            <tr>
+
+              <th scope="col">website_name</th>
+              <th scope="col">website_link</th>
+                <th scope="col">phone</th>
+              <th scope="col">business_info</th>
+                <th scope="col">business_description</th>
+                <th scope="col">direction</th>
+                <th scope="col">find</th>
+              <th scope="col">near</th>
+                <th scope="col">email</th>
+              <th scope="col">website</th>
+                <th scope="col">competitor1</th>
+                <th scope="col">competitor2</th>
+              <th scope="col">competitor3</th>
+                <th scope="col">competitor4</th>
+            </tr>
+          </thead>
+
+
+          <tbody>
+          {% for row in rows %}
+          <tr>
+              <td>{{row["website_name"]}}</td>
+              <td>{{row["website_link"]}}</td>
+              <td>{{row["phone"]}}</td>
+              <td>{{row["business_info"]}}</td>
+              <td>{{row["business_description"]}}</td>
+              <td>{{row["direction"]}}</td>
+              <td>{{row["find"]}}</td>
+              <td>{{row["near"]}}</td>
+              <td>{{row["email"]}}</td>
+              <td>{{row["website"]}}</td>
+              <td>{{row["competitor1"]}}</td>
+              <td>{{row["competitor2"]}}</td>
+              <td>{{row["competitor3"]}}</td>
+              <td>{{row["competitor4"]}}</td>
+          </tr>
+
+          {% endfor %}
+
+          </tbody>
+        </table>
+        </div>
+
+    </div>
+</body>
+</html>
+
+<!--Name text,-->
+<!--        website_link text,-->
+<!--        website_name text,-->
+<!--        phone text,-->
+<!--        Direction text,-->
+<!--        category text,-->
+<!--        find text,-->
+<!--        near text,-->
+<!--        email text,-->
+<!--        website text,-->
+<!--        competitor1 text,-->
+<!--        competitor2 text,-->
+<!--        competitor3 text,-->
+<!--        competitor4 text-->
+
+
+<!--website_name text,-->
+<!--# website_link text,-->
+<!--# phone text,-->
+<!--# business_info text,-->
+<!--# business_description text,-->
+<!--# direction text,-->
+<!--# find text,-->
+<!--# near text,-->
+<!--# email text,-->
+<!--# website text,-->
+<!--# competitor1 text,-->
+<!--# competitor2 text,-->
+<!--# competitor3 text,-->
+<!--# competitor4 text-->
