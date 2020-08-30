@@ -22,40 +22,47 @@ def my_form():
 
 @app.route('/home', methods=['POST'])
 def my_form_post():
-    find = request.form['input1']
-    near = request.form['input2']
+    find_striped = request.form['input1']
+    near_striped = request.form['input2']
+
+    find = find_striped.strip()
+    near = near_striped.strip()
+    print(find)
+    print(near)
+
+    if find != '' and near != '':
+        if (os.stat(os.path.abspath(os.curdir)+'\option.txt').st_size != 0):
+            with open(os.path.abspath(os.curdir)+'\option.txt', 'a') as f:
+                f.write('\n')
+        if(os.stat(os.path.abspath(os.curdir)+'\location.txt').st_size != 0):
+            with open(os.path.abspath(os.curdir)+'\location.txt', 'a') as f:
+                f.write('\n')
+
+        new_find=''
+        new_near=''
 
 
-    if (os.stat(os.path.abspath(os.curdir)+'\option.txt').st_size != 0):
-        with open(os.path.abspath(os.curdir)+'\option.txt', 'a') as f:
-            f.write('')
-    if(os.stat(os.path.abspath(os.curdir)+'\location.txt').st_size != 0):
-        with open(os.path.abspath(os.curdir)+'\location.txt', 'a') as f:
-            f.write('')
+        for b in find:
+            if(b=='\n'):
+                new_find+=''
+            else:
+                new_find+=b
 
-    new_find=''
-    new_near=''
-
-
-    for b in find:
-        if(b=='\n'):
-            new_find+=''
-        else:
-            new_find+=b
-
-    for b in near:
-        if(b=='\n'):
-            new_near+=''
-        else:
-            new_near+=b
+        for b in near:
+            if(b=='\n'):
+                new_near+=''
+            else:
+                new_near+=b
 
 
-    if request.method == 'POST':
-        if find!='' and near!='' :
-           with open(os.path.abspath(os.curdir)+'\option.txt', 'a') as f:
-                f.write(str(new_find))
-           with open(os.path.abspath(os.curdir)+'\location.txt', 'a') as f:
-               f.write(str(new_near))
+        if request.method == 'POST':
+            if find!='' and near!='' :
+               with open(os.path.abspath(os.curdir)+'\option.txt', 'a') as f:
+                    f.write(str(new_find))
+               with open(os.path.abspath(os.curdir)+'\location.txt', 'a') as f:
+                   f.write(str(new_near))
+    else:
+        print("empty")
 
     # return render_template('home.html', find=find,near=near)
     return redirect('http://127.0.0.1:5000/home')
