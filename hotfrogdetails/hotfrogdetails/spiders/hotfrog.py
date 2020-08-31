@@ -78,6 +78,13 @@ class HotfrogSpider(scrapy.Spider):
             self.find_search = find[0]
             self.near_search = near[0]
 
+            if (self.find_search == '' or self.near_search == ''):
+                find.pop(0)
+                near.pop(0)
+
+            self.find_search = find[0]
+            self.near_search = near[0]
+
             find.pop(0)
             near.pop(0)
 

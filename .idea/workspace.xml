@@ -4,7 +4,11 @@
     <list default="true" id="1c6a1e60-0a6a-4203-b283-b60892991b38" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hotfrogdetails/hotfrogdetails.db" beforeDir="false" afterPath="$PROJECT_DIR$/hotfrogdetails/hotfrogdetails.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotfrogdetails/hotfrogdetails/spiders/hotfrog.py" beforeDir="false" afterPath="$PROJECT_DIR$/hotfrogdetails/hotfrogdetails/spiders/hotfrog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotfrogdetails/locationtwo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hotfrogdetails/locationtwo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotfrogdetails/optiontwo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hotfrogdetails/optiontwo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hotfrogdetails/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/hotfrogdetails/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotfrogdetails/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/hotfrogdetails/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +27,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../search/search" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="ServiceViewManager">
@@ -52,17 +56,17 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="155" key="FileChooserDialogImpl" timestamp="1598797480655">
+    <state x="549" y="155" key="FileChooserDialogImpl" timestamp="1598851687984">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="155" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1598797480655" />
+    <state x="549" y="155" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1598851687984" />
     <state x="277" y="56" key="SettingsEditor" timestamp="1598543951357">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1598543951357" />
-    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1598796464533">
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1598851665459">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1598796464533" />
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1598851665459" />
   </component>
 </project>

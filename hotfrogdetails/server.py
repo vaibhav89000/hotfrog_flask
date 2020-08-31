@@ -117,7 +117,7 @@ def delete_all():
     return redirect('http://127.0.0.1:5000/view')
 
 
-@app.route("/csv")
+@app.route("/convertcsv")
 def csv():
     con = sqlite3.connect(os.path.abspath(os.curdir)+"\hotfrogdetails.db")
     con.row_factory = sqlite3.Row
@@ -125,9 +125,14 @@ def csv():
     df = pd.read_sql_query("SELECT * FROM detail", con)
     print(df)
     print(type(df))
-    df.to_csv(os.path.abspath(os.curdir)+'\details.csv', index=False)
 
-    return redirect('http://127.0.0.1:5000/home')
+    with open(os.path.abspath(os.curdir) + '\static\details.csv', "w") as my_empty_csv:
+        # now you have an empty file already
+        pass
+
+    df.to_csv(os.path.abspath(os.curdir) + '\static\details.csv', index=False)
+
+    return redirect('http://127.0.0.1:5000/view')
 
 
 @app.route("/deletebysearch", methods=['POST'])
