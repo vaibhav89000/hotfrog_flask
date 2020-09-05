@@ -42,7 +42,7 @@ class HotfrogthreeSpider(scrapy.Spider):
         index = response.meta['index']
 
 
-        if (os.stat(os.path.abspath(os.curdir)+'\optionthree.txt').st_size != 0 and os.stat(os.path.abspath(os.curdir)+'\locationthree.txt').st_size != 0 and os.stat(os.path.abspath(os.curdir)+'\pagesthree.txt').st_size != 0):
+        if (os.stat(os.path.abspath(os.curdir)+'\optionthree.txt').st_size != 0 and os.stat(os.path.abspath(os.curdir) + '\locationthree.txt').st_size != 0 and os.stat(os.path.abspath(os.curdir) + '\pagesthree.txt').st_size != 0):
             # ind = index
             firstinput = os.path.abspath(os.curdir) + "\optionthree.txt"
             secondinput = os.path.abspath(os.curdir) + "\locationthree.txt"
@@ -75,6 +75,13 @@ class HotfrogthreeSpider(scrapy.Spider):
                 )
 
 
+
+            self.find_search = find[0]
+            self.near_search = near[0]
+
+            if (self.find_search == '' or self.near_search == ''):
+                find.pop(0)
+                near.pop(0)
 
             self.find_search = find[0]
             self.near_search = near[0]
